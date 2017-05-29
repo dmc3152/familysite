@@ -7,7 +7,7 @@ Make sure the following are installed on your local machine:
 - Angular CLI
 - nodemon
 
-The following packaged have been installed:
+The following packages have been installed:
 - bootstrap@next
 - font-awesome
 - angular2-jwt
