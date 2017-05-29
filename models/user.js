@@ -32,14 +32,28 @@ module.exports.getUserByUsername = function(username, callback) {
   User.findOne(query, callback);
 }
 
+module.exports.getUserByEmail = function(email, callback) {
+  const query = {email: email}
+  User.findOne(query, callback);
+}
+
 module.exports.addUser = function(newUser, callback) {
-  bcrypt.genSalt(10, (err, salt) => {
-    bcrypt.hash(newUser.password, salt, (err, hash) => {
-      if(err) throw err;
-      newUser.password = hash;
-      newUser.save(callback);
-    })
-  });
+  // Check if the username has been used before - this should be done in a validation service
+  // User.getUserByUsername(newUser.username, (err, user) => {
+  //   if(err) throw err;
+  //   if(user) {
+  //     callback(null, false);
+  //     return false;
+  //   }
+
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash(newUser.password, salt, (err, hash) => {
+        if(err) throw err;
+        newUser.password = hash;
+        newUser.save(callback);
+      })
+    });
+  // });
 }
 
 module.exports.comparePassword = function(cadidatePassword, hash, callback) {

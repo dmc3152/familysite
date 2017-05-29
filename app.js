@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const config = require("./config/database");
 
 // Connect To Database
+mongoose.Promise = require('bluebird');
 mongoose.connect(config.database);
 
 // On Connection
@@ -45,6 +46,11 @@ app.use("/users", users);
 // Index Route
 app.get("/", (req, res) => {
   res.send("Invalid Endpoint");
+});
+
+// Point all undefined routes to this page
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // Start Session
