@@ -13,3 +13,12 @@ The following packages are installed:
 - angular2-jwt
 
 This quickstart includes examples of how to make basic protected requests. The auth service and guard are created to protect routes and authenticate the user that is logged in.
+
+In order to use this repository, first fork the repository and then make the following changes:
+1. Update package.json
+- Name
+- Description
+- Repository URL
+- Bugs URL
+- Homepage
+2. Run npm install
