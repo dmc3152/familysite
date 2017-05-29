@@ -4,7 +4,7 @@ This is an Angular 4 MEAN quickstart package
 Make sure the following are installed on your local machine:
 - Node.js
 - MongoDB
-- Angular CLI
+- Angular CLI (@angular/cli)
 - nodemon
 
 The following packages have been installed:
