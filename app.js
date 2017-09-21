@@ -8,7 +8,7 @@ const config = require("./config/database");
 
 // Connect To Database
 mongoose.Promise = require('bluebird');
-mongoose.connect(config.database);
+mongoose.connect(config.database, {useMongoClient: true});
 
 // On Connection
 mongoose.connection.on("connected", () => {
