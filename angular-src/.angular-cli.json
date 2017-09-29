@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../external-code/bootstrap.min.css",
+        "../external-code/bootstrap.css",
         "../node_modules/font-awesome/css/font-awesome.min.css",
         "styles.css"
       ],
