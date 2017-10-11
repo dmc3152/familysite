@@ -10,18 +10,18 @@
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 225px;
+    width: 167px;
   }
 }
 
 @media (min-width: 991px) {
   .sidebar {
-    width: 150px;
+    width: 186px;
   }
 }
 
 @media (min-width: 1199px) {
   .sidebar {
-    width: 180px;
+    width: 224px;
   }
 }

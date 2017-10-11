@@ -5,6 +5,8 @@ import { CoreRoutingModule } from './core-routing.module';
 import { AuthService } from './auth.service';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { HowitworksComponent } from './howitworks/howitworks.component';
 
 @NgModule({
   imports: [
@@ -13,14 +15,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   declarations: [
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    AboutusComponent,
+    HowitworksComponent
   ],
   providers: [
     AuthService
   ],
   exports: [
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    AboutusComponent
   ]
 })
 export class CoreModule { }
