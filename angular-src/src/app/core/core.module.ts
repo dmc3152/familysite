@@ -24,8 +24,7 @@ import { HowitworksComponent } from './howitworks/howitworks.component';
   ],
   exports: [
     HeaderComponent,
-    SidebarComponent,
-    AboutusComponent
+    SidebarComponent
   ]
 })
 export class CoreModule { }
