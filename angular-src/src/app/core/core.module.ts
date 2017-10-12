@@ -7,17 +7,19 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
-    SharedModule,
     CoreRoutingModule,
+    SharedModule,
   ],
   declarations: [
     HeaderComponent,
     SidebarComponent,
     AboutusComponent,
-    HowitworksComponent
+    HowitworksComponent,
+    HomeComponent
   ],
   providers: [
     AuthService

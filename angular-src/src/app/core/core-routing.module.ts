@@ -4,16 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   component: HomeComponent,
-  //   canActivate: [AuthGuard, PageGuard],
-  //   resolve: {
-  //     permissions: PageGuard
-  //   }
-  // },
+  {
+    path: 'home',
+    component: HomeComponent,
+    // canActivate: [AuthGuard],
+  },
   {
     path: 'aboutus',
     component: AboutusComponent,

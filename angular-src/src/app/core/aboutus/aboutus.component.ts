@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-aboutus',
@@ -6,7 +6,6 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./aboutus.component.css'],
 })
 export class AboutusComponent implements OnInit {
-  @HostBinding('class') class = 'col-12';
 
   constructor() { }
 
