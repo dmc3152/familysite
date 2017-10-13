@@ -1,0 +1,8 @@
+:host {
+  background-color: #b5b5b5;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0; /* stick to bottom */
+}

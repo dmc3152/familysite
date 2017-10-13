@@ -14,13 +14,13 @@
   }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   .sidebar {
     width: 186px;
   }
 }
 
-@media (min-width: 1199px) {
+@media (min-width: 1200px) {
   .sidebar {
     width: 224px;
   }
