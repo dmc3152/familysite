@@ -1,73 +1,59 @@
-<div class="row no-gutters">
-  <div class="col d-none d-md-block">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="col-md-9 col-lg-7">
-    <div class="card mb-2">
-      <h3 class="card-header">Post 1</h3>
-      <div class="card-block">
-        <h5 class="card-title">Special title treatment</h5>
-        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-      </div>
-      <div class="card-block">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-      <div class="card-footer text-muted text-xs-center">
-        2 days ago
-      </div>
-    </div>
-    <div class="card mb-2">
-      <h3 class="card-header">Post 2</h3>
-      <div class="card-block">
-        <h5 class="card-title">Special title treatment</h5>
-        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-      </div>
-      <div class="card-block">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-      <div class="card-footer text-muted text-xs-center">
-        2 days ago
-      </div>
-    </div>
-    <div class="card mb-2">
-      <h3 class="card-header">Post 3</h3>
-      <div class="card-block">
-        <h5 class="card-title">Special title treatment</h5>
-        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-      </div>
-      <div class="card-block">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-      <div class="card-footer text-muted text-xs-center">
-        2 days ago
-      </div>
-    </div>
-    <div class="card mb-2">
-      <h3 class="card-header">Post 4</h3>
-      <div class="card-block">
-        <h5 class="card-title">Special title treatment</h5>
-        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-      </div>
-      <div class="card-block">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-      <div class="card-footer text-muted text-xs-center">
-        2 days ago
-      </div>
-    </div>
-  </div>
-  <div class="col d-none d-lg-block" id="rightbar">
-    <div class="card">
-      <div class="card-block">
-        Family Site &copy;{{ year }}
+<div id="content" class="row justify-content-center">
+  <div class="col-md-4">
+    <div class="card-group">
+      <div class="card mb-2">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link pointer" [ngClass]="{'active': !isActive}" (click)="isActive = false">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer" [ngClass]="{'active': isActive}" (click)="isActive = true">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="!isActive" class="card-block">
+          <h5 class="card-title">Log In</h5>
+          <h6 class="card-subtitle text-muted">See Your Family</h6>
+        </div>
+        <div *ngIf="!isActive" class="card-block">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary pointer">Log In</button>
+          </form>
+        </div>
+        <div *ngIf="isActive" class="card-block">
+          <h5 class="card-title">Sign Up</h5>
+          <h6 class="card-subtitle text-muted">Start Building Your Family</h6>
+        </div>
+        <div *ngIf="isActive" class="card-block">
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="Enter first name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Enter last name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary pointer">Sign Up</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

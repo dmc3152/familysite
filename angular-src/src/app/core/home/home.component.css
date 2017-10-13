@@ -1,3 +1,19 @@
 #rightbar {
   padding-left: 5px;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.card {
+  padding-bottom: 20px;
+}
+
+.card-block {
+  padding: 20px 20px 0px 20px;
+}
+
+#content {
+  background-color: rgb(110, 206, 206);
+}

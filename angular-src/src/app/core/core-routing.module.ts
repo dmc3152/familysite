@@ -5,6 +5,7 @@ import { AuthGuard } from './auth.guard';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
 import { HomeComponent } from './home/home.component';
+import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
   {
@@ -13,12 +14,16 @@ const routes: Routes = [
     // canActivate: [AuthGuard],
   },
   {
-    path: 'aboutus',
-    component: AboutusComponent,
+    path: 'feed',
+    component: FeedComponent,
   },
   {
     path: 'howitworks',
     component: HowitworksComponent,
+  },
+  {
+    path: 'aboutus',
+    component: AboutusComponent,
   },
   // {
   //   path: 'admin',

@@ -8,6 +8,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   imports: [
@@ -19,14 +21,16 @@ import { HomeComponent } from './home/home.component';
     SidebarComponent,
     AboutusComponent,
     HowitworksComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    FeedComponent
   ],
   providers: [
     AuthService
   ],
   exports: [
     HeaderComponent,
-    SidebarComponent
+    FooterComponent
   ]
 })
 export class CoreModule { }
