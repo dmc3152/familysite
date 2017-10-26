@@ -8,11 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent,
-    // canActivate: [AuthGuard],
-  },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent,
+  //   // canActivate: [AuthGuard],
+  // },
   {
     path: 'feed',
     component: FeedComponent,

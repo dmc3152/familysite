@@ -1,3 +1,19 @@
-<p>
-  authentication works!
-</p>
+<div id="content" class="row justify-content-center">
+  <div class="col-md-6 col-lg-5">
+    <div class="card-group">
+      <div class="card mb-2">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link pointer" routerLink="login" [ngClass]="{'active': !isActive}" (click)="isActive = false">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer" routerLink="signup" [ngClass]="{'active': isActive}" (click)="isActive = true">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
