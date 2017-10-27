@@ -23,7 +23,15 @@ export class LogInComponent implements OnInit {
   }
 
   logIn(form: any) {
-    console.log(form);
+    // console.log(form);
+    this.authservice.authenticateUser(form).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }
