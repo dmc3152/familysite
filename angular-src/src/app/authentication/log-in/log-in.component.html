@@ -4,15 +4,15 @@
   <br>
 <!-- </div>
 <div class="card-block"> -->
-  <form>
+  <form [formGroup]="logInForm" (ngSubmit)="logIn(logInForm.value)">
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" formControlName='email' placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName='password' placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-primary btn-block pointer">Log In</button>
+    <button type="submit" class="btn btn-primary btn-block pointer" [disabled]="!logInForm.valid">Log In</button>
   </form>
 </div>
